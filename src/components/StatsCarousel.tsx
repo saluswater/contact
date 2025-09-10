@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { DollarSign, Users, Shield } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Image from 'next/image'
+import { getAssetPath } from '@/lib/assets'
 
 // Animated Counter
 function AnimatedCounter({ 
@@ -90,10 +91,10 @@ export function StatsCarousel() {
 
   // Certifications for desktop display
   const certifications = [
-    { src: '/fau.webp', alt: t('stats.cert.fau') },
-    { src: '/ip54.webp', alt: t('stats.cert.ip54') },
-    { src: '/ip55.webp', alt: t('stats.cert.ip55') },
-    { src: '/nsf.webp', alt: t('stats.cert.nsf') }
+    { src: getAssetPath('/fau.webp'), alt: t('stats.cert.fau') },
+    { src: getAssetPath('/ip54.webp'), alt: t('stats.cert.ip54') },
+    { src: getAssetPath('/ip55.webp'), alt: t('stats.cert.ip55') },
+    { src: getAssetPath('/nsf.webp'), alt: t('stats.cert.nsf') }
   ]
 
   // Combined carousel items: stats + certifications
@@ -209,7 +210,7 @@ export function StatsCarousel() {
               {/* Left Certifications */}
               <div className="flex justify-center" style={{ padding: 'clamp(1rem, 2vw, 2rem)' }}>
                 <Image
-                  src="/fau.webp"
+                  src={getAssetPath("/fau.webp")}
                   alt={t('stats.cert.fau')}
                   width={200}
                   height={200}
@@ -224,7 +225,7 @@ export function StatsCarousel() {
               
               <div className="flex justify-center" style={{ padding: 'clamp(1rem, 2vw, 2rem)' }}>
                 <Image
-                  src="/ip54.webp"
+                  src={getAssetPath("/ip54.webp")}
                   alt={t('stats.cert.ip54')}
                   width={200}
                   height={200}
@@ -286,7 +287,7 @@ export function StatsCarousel() {
               {/* Right Certifications */}
               <div className="flex justify-center" style={{ padding: 'clamp(1rem, 2vw, 2rem)' }}>
                 <Image
-                  src="/ip55.webp"
+                  src={getAssetPath("/ip55.webp")}
                   alt={t('stats.cert.ip55')}
                   width={200}
                   height={200}
@@ -301,7 +302,7 @@ export function StatsCarousel() {
               
               <div className="flex justify-center" style={{ padding: 'clamp(1rem, 2vw, 2rem)' }}>
                 <Image
-                  src="/nsf.webp"
+                  src={getAssetPath("/nsf.webp")}
                   alt={t('stats.cert.nsf')}
                   width={200}
                   height={200}

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { MessageCircle } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
 import Image from 'next/image'
+import { getAssetPath } from '@/lib/assets'
 
 export function HeroSection() {
   const pathname = usePathname()
@@ -51,10 +52,10 @@ export function HeroSection() {
   const getHeroImage = () => {
     const route = pathname === '/' ? 'hair' : pathname.replace('/', '')
     const imageMap = {
-      hair: '/hair-hero.webp',
-      skin: '/skin-hero.webp',
-      kidneys: '/kidneys-hero.webp',
-      cancer: '/cancer-hero.webp'
+      hair: getAssetPath('/hair-hero.webp'),
+      skin: getAssetPath('/skin-hero.webp'),
+      kidneys: getAssetPath('/kidneys-hero.webp'),
+      cancer: getAssetPath('/cancer-hero.webp')
     }
     return imageMap[route as keyof typeof imageMap] || imageMap.hair
   }

@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { Star, Plus } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { getAssetPath } from '@/lib/assets'
 import { AnimatedReveal } from '@/components/AnimatedReveal'
 
 const testimonials = [
@@ -171,7 +172,7 @@ export function TestimonialMarquee() {
         <div className="text-center mb-12">
           <AnimatedReveal direction="fade" delay={200} className="flex justify-center mb-6 pb-4">
             <Image
-              src="/5starsgoogle.webp"
+              src={getAssetPath("/5starsgoogle.webp")}
               alt="5 Stars Google Reviews"
               width={500}
               height={250}

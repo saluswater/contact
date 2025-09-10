@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { MessageCircle, Phone, Globe, Menu, X } from 'lucide-react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { getAssetPath } from '@/lib/assets'
 
 const healthProblems = [
   { 
@@ -71,7 +72,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href={getUrlWithLanguage("/")} className="flex items-center">
             <Image
-              src="/logo-small.webp"
+              src={getAssetPath("/logo-small.webp")}
               alt="Salus Water"
               width={120}
               height={40}
