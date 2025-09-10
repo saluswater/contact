@@ -7,7 +7,7 @@ import { BenefitsGrid } from '@/components/BenefitsGrid'
 import { FAQSection } from '@/components/FAQSection'
 import { ConversionSection } from '@/components/ConversionSection'
 
-export default function Home() {
+export default function KidneysPage() {
   return (
     <>
       <Navbar />
