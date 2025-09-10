@@ -12,7 +12,7 @@ export function HeroSection() {
   const { t, getWhatsAppNumber } = useLanguage()
 
   const getHeroContent = () => {
-    const route = pathname === '/' ? 'hair' : pathname.substring(1)
+    const route = pathname === '/' ? 'hair' : pathname.replace(/^\/+|\/+$/g, '')
     return {
       headline: t(`hero.${route}.headline`),
       subtitle: t(`hero.${route}.subtitle`)
@@ -20,7 +20,7 @@ export function HeroSection() {
   }
 
   const getRouteColors = () => {
-    const route = pathname === '/' ? 'hair' : pathname.substring(1)
+    const route = pathname === '/' ? 'hair' : pathname.replace(/^\/+|\/+$/g, '')
     
     const colorMap = {
       hair: {
@@ -45,12 +45,12 @@ export function HeroSection() {
   }
 
   const getWhatsAppMessage = () => {
-    const route = pathname === '/' ? 'home' : pathname.substring(1)
+    const route = pathname === '/' ? 'home' : pathname.replace(/^\/+|\/+$/g, '')
     return t(`whatsapp.${route}`)
   }
 
   const getHeroImage = () => {
-    const route = pathname === '/' ? 'hair' : pathname.substring(1)
+    const route = pathname === '/' ? 'hair' : pathname.replace(/^\/+|\/+$/g, '')
     const imageMap = {
       hair: getAssetPath('/hair-hero.webp'),
       skin: getAssetPath('/skin-hero.webp'),
@@ -74,7 +74,7 @@ export function HeroSection() {
       <div className="lg:hidden absolute inset-0 z-5">
         <Image
           src={getHeroImage()}
-          alt={`Salus Water ${pathname === '/' ? 'hair' : pathname.substring(1)} benefits`}
+          alt={`Salus Water ${pathname === '/' ? 'hair' : pathname.replace(/^\/+|\/+$/g, '')} benefits`}
           fill
           className="object-cover"
           sizes="100vw"
@@ -134,7 +134,7 @@ export function HeroSection() {
           <div className="hidden lg:block relative min-h-screen">
             <Image
               src={getHeroImage()}
-              alt={`Salus Water ${pathname === '/' ? 'hair' : pathname.substring(1)} benefits`}
+              alt={`Salus Water ${pathname === '/' ? 'hair' : pathname.replace(/^\/+|\/+$/g, '')} benefits`}
               fill
               className="object-cover"
               sizes="50vw"

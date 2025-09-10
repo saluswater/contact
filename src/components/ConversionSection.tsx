@@ -28,10 +28,10 @@ export function ConversionSection() {
   const pathname = usePathname()
   const { t, getWhatsAppNumber } = useLanguage()
   
-  const route = pathname === '/' ? 'hair' : pathname.substring(1)
+  const route = pathname === '/' ? 'hair' : pathname.replace(/^\/+|\/+$/g, '')
 
   const getWhatsAppMessage = () => {
-    return t(`whatsapp.${pathname === '/' ? 'home' : pathname.substring(1)}`)
+    return t(`whatsapp.${pathname === '/' ? 'home' : pathname.replace(/^\/+|\/+$/g, '')}`)
   }
 
   const getContent = () => {
