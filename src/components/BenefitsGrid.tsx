@@ -141,7 +141,7 @@ export function BenefitsGrid() {
   const pathname = usePathname()
   const { t } = useLanguage()
   
-  const route = pathname === '/' ? 'hair' : pathname.replace('/', '')
+  const route = pathname === '/' ? 'hair' : pathname.substring(1)
   const benefits = benefitsConfig[pathname as keyof typeof benefitsConfig] || benefitsConfig['/hair']
 
   return (
