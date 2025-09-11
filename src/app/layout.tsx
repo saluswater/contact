@@ -18,19 +18,44 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link 
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" 
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
           rel="stylesheet"
         />
         <style>{`
-          /* Ensure fonts load properly in GitHub Pages */
+          /* Coolvetica Local Fonts */
           @font-face {
-            font-family: 'Coolvetica-Fallback';
-            src: local('Arial Black'), local('Helvetica Neue Bold'), local('Impact'), local('Franklin Gothic Heavy');
-            font-weight: 900;
-            font-display: swap;
+            font-family: 'Coolvetica';
+            src: url('/contact/fonts/coolvetica/Coolvetica Rg.otf') format('opentype');
+            font-weight: 400;
             font-style: normal;
+            font-display: swap;
           }
           
+          @font-face {
+            font-family: 'Coolvetica';
+            src: url('/contact/fonts/coolvetica/Coolvetica Hv Comp.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+          }
+          
+          @font-face {
+            font-family: 'Coolvetica';
+            src: url('/contact/fonts/coolvetica/Coolvetica Rg Cond.otf') format('opentype');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+          }
+          
+          @font-face {
+            font-family: 'Coolvetica';
+            src: url('/contact/fonts/coolvetica/Coolvetica Rg It.otf') format('opentype');
+            font-weight: 400;
+            font-style: italic;
+            font-display: swap;
+          }
+          
+          /* Fallback fonts */
           @font-face {
             font-family: 'Inter-Fallback';
             src: local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI');
