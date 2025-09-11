@@ -18,16 +18,17 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link 
-          href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" 
+          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" 
           rel="stylesheet"
         />
         <style>{`
           /* Ensure fonts load properly in GitHub Pages */
           @font-face {
-            font-family: 'Lexend-Fallback';
-            src: local('Helvetica Neue'), local('Arial Black'), local('Arial');
-            font-weight: 300 800;
+            font-family: 'Coolvetica-Fallback';
+            src: local('Arial Black'), local('Helvetica Neue Bold'), local('Impact'), local('Franklin Gothic Heavy');
+            font-weight: 900;
             font-display: swap;
+            font-style: normal;
           }
           
           @font-face {
