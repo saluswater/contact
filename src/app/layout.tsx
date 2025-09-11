@@ -1,17 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Salus Water - Pure Alkaline Water for Optimal Health",
@@ -25,9 +14,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" 
+          rel="stylesheet"
+        />
+        <style>{`
+          /* Ensure fonts load properly in GitHub Pages */
+          @font-face {
+            font-family: 'Lexend-Fallback';
+            src: local('Helvetica Neue'), local('Arial Black'), local('Arial');
+            font-weight: 300 800;
+            font-display: swap;
+          }
+          
+          @font-face {
+            font-family: 'Inter-Fallback';
+            src: local('-apple-system'), local('BlinkMacSystemFont'), local('Segoe UI');
+            font-weight: 300 700;
+            font-display: swap;
+          }
+        `}</style>
+      </head>
+      <body className="antialiased font-sans">
         <LanguageProvider>
           {children}
         </LanguageProvider>
