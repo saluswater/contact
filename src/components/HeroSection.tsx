@@ -102,7 +102,7 @@ export function HeroSection() {
           <div className="flex items-center justify-center px-4 container mx-auto lg:mx-0 lg:pl-8 xl:pl-16 relative z-30">
             <div className="max-w-2xl">
               <h1 
-                className="text-[60px] md:text-6xl lg:text-6xl xl:text-7xl font-black leading-tight mb-6"
+                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight mb-6"
                 style={{ color: colors.text }}
               >
                 {content.headline}

@@ -31,7 +31,7 @@ export function HowItWorksSection() {
       <div className="container mx-auto px-4 max-w-7xl">
         <AnimatedReveal direction="up" delay={200}>
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-gray-900 mb-4 leading-tight">
               {t('how.title')}
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -91,7 +91,7 @@ export function HowItWorksSection() {
                   {/* Content Section */}
                   <div className="flex-1 flex flex-col justify-center space-y-3">
                     <h3 className="
-                      text-lg md:text-xl font-bold text-gray-900 
+                      text-lg md:text-xl font-semibold text-gray-900 
                       group-hover:text-blue-700 
                       transition-colors duration-300
                       leading-tight

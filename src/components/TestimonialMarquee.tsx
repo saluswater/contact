@@ -181,7 +181,7 @@ export function TestimonialMarquee() {
           </AnimatedReveal>
           
           <AnimatedReveal direction="up" delay={400}>
-            <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl xl:text-5xl font-semibold text-gray-900 mb-4 leading-tight">
               <span className="underline decoration-emerald-500 decoration-4 underline-offset-4">
                 {t('testimonials.title')}
               </span>

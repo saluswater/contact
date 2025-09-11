@@ -53,7 +53,7 @@ export function ConversionSection() {
       <div className="container mx-auto px-4 relative z-10">
         <AnimatedReveal direction="up" delay={200} duration={800}>
           <div className="text-center mb-16 space-y-6">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight">
               {content.headline}
             </h2>
             <p className="text-blue-100 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
